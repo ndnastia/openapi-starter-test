@@ -1,4 +1,4 @@
-description: "User's email address."
+description: Email address for ticket purchaser.
 type: string
 format: email
-example: bunny.rabbit@example.com
+example: museum-lover@example.com
