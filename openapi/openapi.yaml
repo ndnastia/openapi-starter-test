@@ -1,9 +1,9 @@
 openapi: 3.1.0
 info:
-  title: Redocly Museum API
+  title: Redocly Museum API and Swagger PetStore
   description: >-
     Imaginary, but delightful Museum API for interacting with museum services
-    and information. Built with love by Redocly.
+    and information. Built with love by Redocly. You can also find a sample Pet Store Server based on the OpenAPI 3.0 specification.
   version: 1.1.1
   termsOfService: https://redocly.com/subscription-agreement/
   contact:
@@ -12,6 +12,9 @@ info:
   license:
     name: MIT
     url: https://opensource.org/license/mit/
+  x-logo:
+    url: 'https://intranet.redocly.com/icon.png'
+    altText: OpenAPI example logo
 servers:
   - url: https://api.fake-museum-example.com/v1.1
   - url: /v3
