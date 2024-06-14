@@ -14,6 +14,35 @@ info:
     url: https://opensource.org/license/mit/
 servers:
   - url: https://api.fake-museum-example.com/v1.1
+  - url: /v3
+tags:
+  - name: Operations
+    description: Operational information about the museum.
+    x-displayName: Operations
+  - name: Events
+    description: Special events hosted by the museum.
+    x-displayName: Events
+  - name: Tickets
+    description: Museum tickets for general entrance or special events.
+    x-displayName: Tickets
+  - name: pet
+    description: Everything about your Pets
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+    x-displayName: pet
+  - name: store
+    description: Access to Petstore orders
+    externalDocs:
+      description: Find out more about our store
+      url: http://swagger.io
+    x-displayName: store
+  - name: user
+    description: Operations about user
+    x-displayName: user
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
 paths:
   /museum-hours:
     $ref: paths/museum-hours.yaml
@@ -25,17 +54,57 @@ paths:
     $ref: paths/tickets.yaml
   /tickets/{ticketId}/qr:
     $ref: paths/tickets_{ticketId}_qr.yaml
+  /pet:
+    $ref: paths/pet.yaml
+  /pet/findByStatus:
+    $ref: paths/pet_findByStatus.yaml
+  /pet/findByTags:
+    $ref: paths/pet_findByTags.yaml
+  /pet/{petId}:
+    $ref: paths/pet_{petId}.yaml
+  /pet/{petId}/uploadImage:
+    $ref: paths/pet_{petId}_uploadImage.yaml
+  /store/inventory:
+    $ref: paths/store_inventory.yaml
+  /store/order:
+    $ref: paths/store_order.yaml
+  /store/order/{orderId}:
+    $ref: paths/store_order_{orderId}.yaml
+  /user:
+    $ref: paths/user.yaml
+  /user/createWithList:
+    $ref: paths/user_createWithList.yaml
+  /user/login:
+    $ref: paths/user_login.yaml
+  /user/logout:
+    $ref: paths/user_logout.yaml
+  /user/{username}:
+    $ref: paths/user_{username}.yaml
 components:
   securitySchemes:
     MuseumPlaceholderAuth:
       type: http
       scheme: basic
-tags:
-  - name: Operations
-    description: Operational information about the museum.
-  - name: Events
-    description: Special events hosted by the museum.
-  - name: Tickets
-    description: Museum tickets for general entrance or special events.
-security:
-  - MuseumPlaceholderAuth: []
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://petstore.swagger.io/oauth/authorize
+          scopes:
+            write:pets: modify pets in your account
+            read:pets: read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
+x-tagGroups:
+  - name: Redocly Museum API
+    tags:
+      - Operations
+      - Events
+      - Tickets
+  - name: Swagger Petstore - OpenAPI 3.0
+    tags:
+      - pet
+      - store
+      - user

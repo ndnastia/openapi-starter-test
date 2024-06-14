@@ -27,6 +27,8 @@ post:
       $ref: ../components/responses/BadRequest.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+  security:
+    - MuseumPlaceholderAuth: []
 get:
   summary: List special events
   description: Return a list of upcoming special events at the museum.
@@ -52,3 +54,5 @@ get:
       $ref: ../components/responses/BadRequest.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+  security:
+    - MuseumPlaceholderAuth: []
