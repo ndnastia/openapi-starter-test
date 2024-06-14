@@ -40,3 +40,7 @@ get:
             type: string
     '400':
       description: Invalid username/password supplied
+  security:
+    - petstore_auth:
+        - write:pets
+        - read:pets

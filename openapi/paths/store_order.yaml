@@ -14,6 +14,10 @@ post:
             $ref: ../components/schemas/Order.yaml
     '405':
       description: Invalid input
+  security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
   requestBody:
     content:
       application/json:

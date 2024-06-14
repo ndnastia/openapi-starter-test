@@ -8,3 +8,7 @@ get:
   responses:
     default:
       description: successful operation
+  security:
+    - petstore_auth:
+        - write:pets
+        - read:pets

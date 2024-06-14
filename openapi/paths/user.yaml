@@ -14,6 +14,10 @@ post:
         application/xml:
           schema:
             $ref: ../components/schemas/User.yaml
+  security:
+    - petstore_auth:
+        - write:pets
+        - read:pets
   requestBody:
     content:
       application/json:

@@ -29,6 +29,10 @@ get:
       description: Invalid ID supplied
     '404':
       description: Order not found
+  security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
 delete:
   tags:
     - store
@@ -51,3 +55,7 @@ delete:
       description: Invalid ID supplied
     '404':
       description: Order not found
+  security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'

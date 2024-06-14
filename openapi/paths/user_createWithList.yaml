@@ -17,6 +17,10 @@ post:
             $ref: ../components/schemas/User.yaml
     default:
       description: successful operation
+  security:
+    - petstore_auth:
+        - write:pets
+        - read:pets
   requestBody:
     content:
       application/json:
