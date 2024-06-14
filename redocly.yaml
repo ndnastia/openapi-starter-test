@@ -9,11 +9,13 @@ rules:
   no-server-example.com: off
 theme:
   openapi:
-    htmlTemplate: ./docs/redoc-static.html
+    disableSearch: true
     theme:
-      colors:
-        primary:
-          main: "#32329f"
+      sidebar: 
+       backgroundColor: "#A6C3E"
+      rightPanel: 
+        backgroundColor: "#2c2c56"
+       
     generateCodeSamples:
       languages:  # Array of language config objects; indicates in which languages to generate code samples.
         - lang: curl
