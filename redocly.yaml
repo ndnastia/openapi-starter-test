@@ -10,6 +10,7 @@ rules:
 theme:
   openapi:
     disableSearch: true
+    htmlTemplate: ./docs/index.html
     theme:
       layout: 
         showDarkRightPanel: true
