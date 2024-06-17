@@ -11,6 +11,8 @@ theme:
   openapi:
     disableSearch: true
     theme:
+      layout: 
+        showDarkRightPanel: true
       sidebar: 
         backgroundColor: "#A6C3E4"
       rightPanel: 
