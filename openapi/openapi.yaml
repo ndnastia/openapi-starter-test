@@ -4,6 +4,10 @@ info:
   description: >-
     Imaginary, but delightful Museum API for interacting with museum services
     and information. Built with love by Redocly. You can also find a sample Pet Store Server based on the OpenAPI 3.0 specification.
+
+    # Embedded video
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WVDWmGpKLek?si=QM__ZVo6siUZai0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   version: 1.1.1
   termsOfService: https://redocly.com/subscription-agreement/
   contact:

@@ -30,8 +30,22 @@ post:
         - write:pets
         - read:pets
   requestBody:
-    content:
-      application/octet-stream:
-        schema:
-          type: string
-          format: binary
+   description: Example description
+   required: true
+   content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties:
+          fileBase64:
+            description: Example description
+            type: array
+            items:
+              type: string
+              format: base64
+          fileBinary:
+            description: Example description
+            type: array
+            items:
+              type: string
+              contentMediaType: application/octet-stream

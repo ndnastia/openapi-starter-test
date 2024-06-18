@@ -10,13 +10,22 @@ rules:
 theme:
   openapi:
     disableSearch: true
+    htmlTemplate: ./docs/index.html
     theme:
       layout: 
         showDarkRightPanel: true
       sidebar: 
         backgroundColor: "#A6C3E4"
       rightPanel: 
-       backgroundColor: "#708090"       
+       backgroundColor: "#708090"
+      typography: 
+        code: 
+          fontFamily: "Rubik, sans-serif"
+          fontWeight: "400"
+        headings: 
+          fontFamily: "Roboto Mono, monospace"
+          fontWeight: "400"
+                
     generateCodeSamples:
       languages:  # Array of language config objects; indicates in which languages to generate code samples.
         - lang: curl
