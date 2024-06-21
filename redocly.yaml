@@ -6,7 +6,7 @@ extends:
 plugins:
   - './acme-plugin.js'
 decorators:
-  plugin/change-token-url:
+  decorators/change-token-url:
     tokenUrl: 'https://token.example.com/url'
 theme:
   openapi:
