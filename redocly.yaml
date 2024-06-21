@@ -3,9 +3,11 @@ apis:
     root: openapi/openapi.yaml
 extends:
   - recommended
-rules:
-  no-unused-components: error
-  no-server-example.com: off
+plugins:
+  - './acme-plugin.js'
+decorators:
+  plugin/change-token-url:
+    tokenUrl: 'https://token.example.com/url'
 theme:
   openapi:
     disableSearch: true
