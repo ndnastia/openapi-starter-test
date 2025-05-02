@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: Redocly Museum API and Swagger PetStore
+  title: Redocly Museum API and Swagger PetStore 2
   description: >-
     Imaginary, but delightful Museum API for interacting with museum services
     and information. Built with love by Redocly. You can also find a sample Pet Store Server based on the OpenAPI 3.0 specification.
