@@ -1,6 +1,4 @@
-apis:
-  sample@v1: 
-    root: openapi/openapi.yaml
+
 extends:
   - recommended
 plugins:
