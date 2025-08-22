@@ -1,6 +1,6 @@
 apis:
   main: 
-    root: openapi
+    root: .
 extends:
   - recommended
 plugins:
